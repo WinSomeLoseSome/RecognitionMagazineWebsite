@@ -1,0 +1,40 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Article</title>
+	<link rel="stylesheet" href ="{% static 'styles.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700i" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<nav>
+			
+			
+			<a href = "{% url 'articles:list' %}">
+				<img class = "logo" src="{% static 'Recognition-logo.png' %}">
+				<h1 style="visibility: hidden; position: absolute;">
+					Recognition Magazine
+				</h1>
+			</a>
+			<ul>
+				<li><a href = '#'>HOME</a></li>
+				<li><a href = '#'>CONTACT</a></li>
+				<li><a href = '#'>ABOUT</a></li>
+			</ul>
+
+			<dir>{% block search_bar %}
+			{% endblock %}</dir>
+			
+
+		</nav>
+		<article>
+			{% block content %}
+			{% endblock %}
+		</article>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+{% block search_bar %}
+
+<form class="site-form" action="{% url 'search_app:search' %}" method="post">
+		{% csrf_token %}
+		{{ form }}
+				<input type="submit" name="Search">
+</form>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+nav {
+	width: 100%;
+	max-width: 1260px;
+	clear: left;
+	overflow: auto;
+
+
+}
+
+nav ul {
+	vertical-align: middle;
+	list-style-type: none;
+	
+}
+
+nav ul li {
+	padding: 7px 5px 7px 5px;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+nav ul a {
+	text-decoration: none;
+	color: #060f5f;
+	
+}
+nav ul a:hover {
+	color: #9E9E9E;
+	
+}
+
+
+article{
+	width: 100%;
+	padding: 20px 10px 0px 0px;
+	clear: left;
+}
+
+@media only screen and (max-width: 792px) {
+	 nav ul li{
+	 	display: inline;
+	 	position: relative;
+	 	
+	 	bottom: 0px;
+	 	text-align: center;
+	 	font-size: 15px;
+	 }
+
+	 nav ul {
+	 	margin-right:50px;
+	 	float: left;
+	 }
+
+	 nav a img {
+	 	padding-bottom: 0px;
+	 }
+}
+
+nav .logo{
+	/*
+	logo is 1743x469px
+	*/
+
+	width: 100%;
+	height: auto;
+	max-width: 610px;
+	max-height: 164px;
+	float: left;
+	margin-right: 20px;
+}
+
+.container {
+	margin: 20px 10px 10px 10px;
+}
