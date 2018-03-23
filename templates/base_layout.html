@@ -11,8 +11,11 @@
 <body>
 	<div class="container">
 		<nav>
-			
-			
+			<form action="{% url 'articles:search' %}" method="get">
+				{% csrf_token %}
+				{{ search_form }}
+				<input type="submit" name="submit_search">
+			</form>
 			<a href = "{% url 'articles:list' %}">
 				<img class = "logo" src="{% static 'Recognition-logo.png' %}">
 				<h1 style="visibility: hidden; position: absolute;">
@@ -24,17 +27,12 @@
 				<li><a href = '#'>CONTACT</a></li>
 				<li><a href = '#'>ABOUT</a></li>
 			</ul>
-
-			<dir>{% block search_bar %}
-			{% endblock %}</dir>
 			
-
 		</nav>
 		<article>
 			{% block content %}
 			{% endblock %}
 		</article>
-
 	</div>
 </body>
 </html>
