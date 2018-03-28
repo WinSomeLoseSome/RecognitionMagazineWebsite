@@ -4,18 +4,16 @@
 <html>
 <head>
 	<title>Article</title>
+
 	<link rel="stylesheet" href ="{% static 'styles.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700i" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div class="container">
+		
 		<nav>
-			<form action="{% url 'articles:search' %}" method="get">
-				{% csrf_token %}
-				{{ search_form }}
-				<input type="submit" name="submit_search">
-			</form>
+			
 			<a href = "{% url 'articles:list' %}">
 				<img class = "logo" src="{% static 'Recognition-logo.png' %}">
 				<h1 style="visibility: hidden; position: absolute;">
@@ -26,9 +24,15 @@
 				<li><a href = '#'>HOME</a></li>
 				<li><a href = '#'>CONTACT</a></li>
 				<li><a href = '#'>ABOUT</a></li>
+				<li></li>
 			</ul>
 			
 		</nav>
+		<form class="search-form" action="{% url 'articles:search' %}" method="get">
+				{% csrf_token %}
+				{{ search_form }}			
+			</form>
+
 		<article>
 			{% block content %}
 			{% endblock %}
