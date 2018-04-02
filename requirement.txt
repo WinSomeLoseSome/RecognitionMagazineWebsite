@@ -1,0 +1,13 @@
+click==6.7
+Django==2.0.3
+django-multiurl==1.2.0
+mysqlclient==1.3.12
+Paginator==0.5.1
+Pillow==5.0.0
+PyMySQL==0.8.0
+pyparsing==2.2.0
+pytz==2018.3
+selenium==3.11.0
+six==1.11.0
+svgwrite==1.1.12
+virtualenv==15.1.0
