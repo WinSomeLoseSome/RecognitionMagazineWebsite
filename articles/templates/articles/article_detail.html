@@ -3,14 +3,38 @@
 {% block content %}
 
 <div class="article-detail">
-	<div class="article">
-		<img src="{{article.thumb.url }}">
-		<h2>{{ article.title }}</h2>
-		<h3>Vocals</h3>
-		<p>{{ article.vocals_body }}</p>
-		<h3>Beat</h3>
-		<p>{{ article.beat_body }}</p>
-		<p>{{ article.date }}</p>
+	<div class="detail-article">
+		
+		<section class="detail-title">
+			<h2>{{ article.title }}</h2>
+			<p>{{ article.quote}}</p>
+
+		</section>
+
+		<section class="detail-album-art">
+		<img src="{{article.album_art.url }}" style="max-width: 600px; max-height: 600px; width: 100%">
+		</section>
+
+		<section class="detail-info-1">
+			<p> Genre: {{ article.genre }} </p>
+			<p>{{ article.vocals_body }}</p>
+		</section>
+
+		<section class="detail-album-art">
+		<img src="{{article.artist_image.url }}" style="max-width: 600px; max-height: 600px; width: 100%">
+		</section>
+
+		<section class="detail-info-2">
+			<p>{{ article.beat_body }}</p>
+		</section>
+
+		<section class="detail-embed">
+			<p> {{ article.embed | safe}} </p>
+		</section>
+
+		<section class="detail-author-date">
+			<p>Published by: {{ article.author}} &nbsp;&nbsp;-&nbsp;&nbsp; {{ article.date }}</p>
+		</section>
 
 		
 	</div>

@@ -13,7 +13,8 @@ from multiurl import multiurl
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("articles.urls")),
-    path('about/', views.about),
+    path('about/', views.about, name="about"),
+    path('contact/', views.contact, name="contact")
     
 ]
 

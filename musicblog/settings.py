@@ -79,9 +79,10 @@ WSGI_APPLICATION = 'musicblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_db',
-        'USER': 'root',
-        'PASSWORD': 'Dragonawake'
+        'HOST': 'den1.mysql1.gear.host',
+        'NAME': 'recognition',
+        'USER': 'recognition',
+        'PASSWORD': 'Km484AIuv!2~'
     }
 }
 

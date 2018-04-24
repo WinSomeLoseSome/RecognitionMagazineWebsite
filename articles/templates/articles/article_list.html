@@ -3,11 +3,11 @@
 
 {% block content %}
 		{% for article in articles %}
-		<div class="article">
+		<div class="list-article">
 			
-			<section class="album-art">
+			<section class="list-album-art">
 				<a href="{% url 'articles:detail' slug=article.slug %}">
-				<img src="{{article.thumb.url }}" style="max-width: 600px; max-height: 600px; width: 100%">
+				<img src="{{article.album_art.url }}" style="max-width: 600px; max-height: 600px; width: 100%">
 				</a>
 			</section>
 			<h2><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a></h2>

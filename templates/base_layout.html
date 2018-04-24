@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="margin-left:14px; margin-right:14px; margin-top: 14px;">
 		
 		<nav>
 			
@@ -21,9 +21,9 @@
 				</h1>
 			</a>
 			<ul>
-				<li><a href = '#'>HOME</a></li>
-				<li><a href = '#'>CONTACT</a></li>
-				<li><a href = '#'>ABOUT</a></li>
+				<li><a href = "{% url 'articles:list' %}">HOME</a></li>
+				<li><a href = "{% url 'contact' %}">CONTACT</a></li>
+				<li><a href = "{% url 'about' %}">ABOUT</a></li>
 				<li></li>
 			</ul>
 			
@@ -38,5 +38,8 @@
 			{% endblock %}
 		</article>
 	</div>
+	<section class="footer">
+		<p>&copy; 2018 Recognition Magazine</p> 
+	</section>
 </body>
 </html>

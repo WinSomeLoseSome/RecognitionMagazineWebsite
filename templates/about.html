@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>About</title>
-</head>
-<body>
-	<h1> about </h1>
-</body>
-</html>
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<section class="contact">
+	<h1>About</h1>
+	<p>Recognition Magazine is dedicated to bringing artists who are making unique and high quality music into the spotlight. We are always looking for new and upcoming artists to feature on our site. To submit music to be highlighted in Recognition Magazine see our <a href="{% url 'contact' %}">contact</a> page.</p>
+	<br> <br> <br> <br>
+</section>
+{% endblock %}

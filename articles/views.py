@@ -10,7 +10,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def article_list(request):
 	# all the articles stored
-	articles_list = Article.objects.all().order_by('date')
+	articles_list = Article.objects.all().order_by('-date')
 	page = request.GET.get('page', 1)
 
 	paginator = Paginator(articles_list, 4)
