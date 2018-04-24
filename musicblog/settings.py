@@ -82,7 +82,7 @@ DATABASES = {
         'HOST': 'den1.mysql1.gear.host',
         'NAME': 'recognition',
         'USER': 'recognition',
-        'PASSWORD': 'Km484AIuv!2~'
+        'PASSWORD': '****'
     }
 }
 
