@@ -18,6 +18,7 @@
 	</div>
 
 	{% if articles.has_other_pages %}
+  <center>
   <ul class="pagination">
     {% if articles.has_previous %}
       <li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
@@ -26,7 +27,7 @@
     {% endif %}
     {% for i in articles.paginator.page_range %}
       {% if articles.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        <li class="active"><span>{{ i }}</span></li>
       {% else %}
         <li><a href="?page={{ i }}">{{ i }}</a></li>
       {% endif %}
@@ -38,5 +39,6 @@
     {% endif %}
   </ul>
 {% endif %}
+</center>
 
 {% endblock %}
